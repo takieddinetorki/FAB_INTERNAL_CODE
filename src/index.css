@@ -639,6 +639,16 @@ figcaption {
   margin: 0;
   padding: 0;
 }
+ul {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+ul  > li:before {
+  content: "-";
+  padding: 20px;
+}
 button {
   background-color: transparent;
 }

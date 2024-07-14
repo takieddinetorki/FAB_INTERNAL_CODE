@@ -74,7 +74,7 @@ Navbar.defaultProps = {
   link2: 'Services',
   link4: 'Contact',
   logoSrc: logo,
-  logoAlt: 'FAB PropriÃ©tÃ© Multi Service',
+  logoAlt: 'FAB PropriÃ©tÃ© mulot-service',
     action1: '/',
     action2: '/services',
 };
@@ -280,7 +280,7 @@ Hero.defaultProps = {
     'https://images.unsplash.com/photo-1421940943431-d392fcc1079f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   image10Alt: 'Hero Image',
   image4Alt: 'Hero Image',
-  heading1: 'Bienvenue chez FAB Propriété Multi Service',
+  heading1: 'Bienvenue chez FAB Propriété Mulot Service',
   content1: 'Notre spécialité: nettoyage des Vitres, remise en état après travaux, nettoyage des moquettes',
   image10Src:
     'https://images.unsplash.com/photo-1584378834085-0aa159117f9b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -327,17 +327,25 @@ const Features1 = (props) => {
       , React.createElement('div', { className: "features1-container1 thq-section-max-width" ,}
         , React.createElement('div', { className: "features1-image-container",}
           , activeTab === 0 && (
-            React.createElement('img', {
-              alt: props.feature1ImgAlt,
-              src: props.feature1ImgSrc,
-              className: "features1-image thq-img-ratio-16-9" ,}
+            React.createElement('div', {
+              className: "" ,}
+              ,
+              React.createElement('span', { className: "thq-body-large ",}
+                , props.aproposDescription
+              )
             )
           )
           , activeTab === 1 && (
-            React.createElement('img', {
-              alt: props.feature2ImgAlt,
-              src: props.feature2ImgSrc,
-              className: "features1-image1 thq-img-ratio-16-9" ,}
+            React.createElement('span', {
+              className: "thq-body-large" ,}, props.whatwedodesc
+              , React.createElement('ul', {className: ""}, 
+                React.createElement('li', {className: "thq-body-large"}, props.spec1),
+                React.createElement('li', {className: "thq-body-large"}, props.spec2),
+                React.createElement('li', {className: "thq-body-large"}, props.spec3),
+                React.createElement('li', {className: "thq-body-large"}, props.spec4),
+              ),
+              React.createElement('span', {className: "thq-body-large"}, props.devis),
+
             )
           )
           , activeTab === 2 && (
@@ -357,10 +365,7 @@ const Features1 = (props) => {
               , activeTab === 0 && React.createElement('div', { className: "features1-container2",})
             )
             , React.createElement('div', { className: "features1-content",}
-              , React.createElement('h2', { className: "thq-heading-2",}, props.feature1Title)
-              , React.createElement('span', { className: "thq-body-small",}
-                , props.feature1Description
-              )
+              , React.createElement('h2', { className: "thq-heading-2",}, props.aproposTitre)
             )
           )
           , React.createElement('div', {
@@ -371,10 +376,7 @@ const Features1 = (props) => {
               , activeTab === 1 && React.createElement('div', { className: "features1-container3",})
             )
             , React.createElement('div', { className: "features1-content1",}
-              , React.createElement('h2', { className: "thq-heading-2",}, props.feature2Title)
-              , React.createElement('span', { className: "thq-body-small",}
-                , props.feature2Description
-              )
+              , React.createElement('h2', { className: "thq-heading-2",}, props.whatwedo)
             )
           )
           , React.createElement('div', {
@@ -398,38 +400,19 @@ const Features1 = (props) => {
 };
 
 Features1.defaultProps = {
-
-  feature1Title: 'Personnel Expérimenté',
-  feature1Description:
-    'Notre équipe se compose de professionnels expérimentés dédiés à fournir des services de premier ordre.',
-    feature1ImgAlt: 'Professional Team',
-    feature1ImgSrc:
-      'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    
-    
-    feature3Title: 'Assurance Qualité',
-    feature3ImgSrc:
-    'https://images.unsplash.com/photo-1524803504179-6d7ae4d283f7?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    
-    feature3ImgAlt: 'Quality Assurance Image',
-    feature3Description: 'Services de Haute Qualité',
-  
-  
+  aproposTitre: 'QUI SOMMES NOUS',
+  aproposDescription: 'Nous sommes FAB propreté et multiservices créé le 1er mai 2024 sous la direction de Mr. Tounkara Aboubacar',
+  whatwedo: 'QUE FAISON-NOUS?',
+  whatwedodesc: 'Nous sommes spécialisés dans:',
+  spec1: 'le nettoyage de vitres.',
+  spec2: 'la restauration après travaux.',
+  spec3: 'le nettoyage de tapis.',
+  spec4: 'le nettoyage biologique de copropriété.',
+  devis: 'Tout cela avec un devis gratuit'
 };
 
 Features1.propTypes = {
-  feature1ImgAlt: PropTypes.string,
-  feature3Description: PropTypes.string,
-  feature3Title: PropTypes.string,
-  feature3ImgSrc: PropTypes.string,
-  feature1ImgSrc: PropTypes.string,
-  feature2Description: PropTypes.string,
-  feature1Title: PropTypes.string,
-  feature3ImgAlt: PropTypes.string,
-  feature1Description: PropTypes.string,
-  feature2ImgSrc: PropTypes.string,
-  feature2ImgAlt: PropTypes.string,
-  feature2Title: PropTypes.string,
+  aproposTitre: PropTypes.string,
 };
 
 const CTA = (props) => {
@@ -632,7 +615,7 @@ Contact.defaultProps = {
   content2:
     'N\'hésitez pas à nous contacter par email ou téléphone pendant nos heures d\'ouverture.',
   email1: 'fab.multiserv@gmail.com',
-  address1: '110 avenue Colgate 13009 Marseille',
+  address1: '110 avenues Colgate, 13009 Marseille',
   content3:
     'Notre bureau est idéalement situé au cœur de la ville, ce qui facilite votre visite.',
   content1:
@@ -641,7 +624,7 @@ Contact.defaultProps = {
     'Laissez-nous vous aider à gérer vos propriétés de manière efficace et efficiente.',
   heading1: 'Contactez-Nous',
   content5: 'Nous avons hâte de vous entendre !',
-  phone1: '+33 633 29 24 81',
+  phone1: '+33 633 29 24 81 / +33 751 00 62 76',
 };
 
 Contact.propTypes = {
@@ -755,8 +738,8 @@ const Home = (props) => {
   return (
     React.createElement('div', { className: "home-container",}
       , React.createElement(Helmet, null
-        , React.createElement('title', null, "FAB Multi Service"  )
-        , React.createElement('meta', { property: "og:title", content: "Bienvenue chez FAB Propriété Multi Service"  ,} )
+        , React.createElement('title', null, "FAB mulot-service"  )
+        , React.createElement('meta', { property: "og:title", content: "Bienvenue chez FAB Propriété et multo-service"  ,} )
       )
       , React.createElement('div', { className: "home-navbar",}
         , React.createElement(Navbar, null)
