@@ -666,6 +666,9 @@ button,
 select {
   text-transform: none;
 }
+.slogon{
+  font-size: 25px;
+}
 button,
 [type="button"],
 [type="reset"],

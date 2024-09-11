@@ -1,11 +1,25 @@
 import React from 'react';
+
+import pic1 from './assets/1.jpg'
+import pic2 from './assets/2.jpg'
+import pic3 from './assets/3.jpg'
+import pic4 from './assets/4.jpg'
+import pic5 from './assets/5.jpg'
+import pic6 from './assets/6.jpg'
+import pic8 from './assets/8.jpg'
+import pic9 from './assets/9.jpg'
+import pic10 from './assets/10.jpg'
+import pic11 from './assets/11.jpg'
+import pic14 from './assets/14.jpg'
+import pic16 from './assets/16.jpg'
+import pic17 from './assets/17.jpg'
+import pic18 from './assets/18.jpg'
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import logo from './FAB.png';
 import PropTypes from 'prop-types'
 import { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import reportWebVitals from './reportWebVitals';
 const Navbar = (props) => {
   const scrollToFeature = () => {
     document.getElementById("features").scrollIntoView({ behavior: 'smooth' });
@@ -74,7 +88,7 @@ Navbar.defaultProps = {
   link2: 'Services',
   link4: 'Contact',
   logoSrc: logo,
-  logoAlt: 'FAB PropriÃ©tÃ© mulot-service',
+  logoAlt: 'FAB PropriÃ©tÃ© multi-service',
     action1: '/',
     action2: '/services',
 };
@@ -97,7 +111,7 @@ const Hero = (props) => {
       , React.createElement('div', { className: "hero-column thq-section-padding thq-section-max-width"  ,}
         , React.createElement('div', { className: "hero-content",}
           , React.createElement('h1', { className: "hero-text thq-heading-1" ,}, props.heading1)
-          , React.createElement('p', { className: "hero-text1 thq-body-large" ,}, props.content1)
+          , React.createElement('i', {className: "slogon" ,}, "Plus le lieu est propre, plus il sûr")
         )
         , React.createElement('div', { className: "hero-actions",}
           , React.createElement('button', { className: "thq-button-filled hero-button" ,}
@@ -248,45 +262,34 @@ const Hero = (props) => {
 
 Hero.defaultProps = {
   image3Src:
-    'https://images.unsplash.com/photo-1580842402762-6f5868c17412?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    pic1,
   image8Alt: 'Hero Image',
-  image2Src:
-'https://images.unsplash.com/photo-1686178827149-6d55c72d81df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+  image2Src: pic2,
   image6Alt: 'Hero Image',
-  image11Src:
-    'https://images.unsplash.com/photo-1527515673510-8aa78ce21f9b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image11Src:pic3,
   image5Alt: 'Hero Image',
   image1Alt: 'Professional Property Management Services',
-  image7Src:
-    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image7Src: pic4,
   image7Alt: 'Hero Image',
   image12Alt: 'Hero Image',
   image2Alt: 'Hero Image',
-  image6Src:
-    'https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  image12Src:
-    'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image6Src: pic5,
+  image12Src: pic6,
   image3Alt: 'Hero Image',
-  image9Src:
-    'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image9Src: pic8,
   image11Alt: 'Hero Image',
   action2: 'En savoir plus',
   action1: 'Contactez nous',
-  image8Src:
-    'https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  image5Src:
-    'https://images.unsplash.com/photo-1482449609509-eae2a7ea42b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  image4Src:
-    'https://images.unsplash.com/photo-1421940943431-d392fcc1079f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image8Src: pic9,
+  image5Src: pic10,
+  image4Src: pic11,
   image10Alt: 'Hero Image',
   image4Alt: 'Hero Image',
-  heading1: 'Bienvenue chez FAB Propriété Mulot Service',
+  heading1: 'Bienvenue chez FAB Propreté  multi Service',
   content1: 'Notre spécialité: nettoyage des Vitres, remise en état après travaux, nettoyage des moquettes',
-  image10Src:
-    'https://images.unsplash.com/photo-1584378834085-0aa159117f9b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image10Src: pic14,
   image9Alt: 'Hero Image',
-  image1Src:
-    'https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  image1Src: pic16,
 };
 
 Hero.propTypes = {
@@ -343,6 +346,11 @@ const Features1 = (props) => {
                 React.createElement('li', {className: "thq-body-large"}, props.spec2),
                 React.createElement('li', {className: "thq-body-large"}, props.spec3),
                 React.createElement('li', {className: "thq-body-large"}, props.spec4),
+                React.createElement('li', {className: "thq-body-large"}, props.spec5),
+                React.createElement('li', {className: "thq-body-large"}, props.spec6),
+                React.createElement('li', {className: "thq-body-large"}, props.spec7),
+                React.createElement('li', {className: "thq-body-large"}, props.spec8),
+                React.createElement('li', {className: "thq-body-large"}, props.spec9),
               ),
               React.createElement('span', {className: "thq-body-large"}, props.devis),
 
@@ -401,14 +409,19 @@ const Features1 = (props) => {
 
 Features1.defaultProps = {
   aproposTitre: 'QUI SOMMES NOUS',
-  aproposDescription: 'Nous sommes FAB propreté et multiservices créé le 1er mai 2024 sous la direction de Mr. Tounkara Aboubacar',
+  aproposDescription: 'Nous sommes FAB propreté et multiservices créé le 1er Juillet 2024 sous la direction de Mr. Tounkara Aboubacar',
   whatwedo: 'QUE FAISON-NOUS?',
   whatwedodesc: 'Nous sommes spécialisés dans:',
   spec1: 'le nettoyage de vitres.',
   spec2: 'la restauration après travaux.',
   spec3: 'le nettoyage de tapis.',
-  spec4: 'le nettoyage biologique de copropriété.',
-  devis: 'Tout cela avec un devis gratuit'
+  spec4: 'nettoyage de copropriété.',
+  spec5: 'nettoyage des bureaux où se trouve.',
+  spec6: 'nettoyage parking.',
+  spec7: 'aspray méthode.',
+  spec8: 'remise en état après travaux.',
+  spec9: 'bio nettoyage.',
+  devis: 'Tout cela avec un devis gratuit. Nos clients : les entreprises et les particuliers',
 };
 
 Features1.propTypes = {
@@ -529,7 +542,7 @@ Steps.defaultProps = {
     'Contactez-nous par téléphone ou par email pour discuter de vos besoins en gestion immobilière.',
     step2Title: 'Consultation',
     step2Description:
-    'Planifiez une consultation avec nos experts pour évaluer votre propriété et déterminer les meilleurs services pour vous.',
+    'Planifiez une consultation avec nos experts pour évaluer votre propreté  et déterminer les meilleurs services pour vous.',
     step3Title: 'Solutions Personnalisées',
     step3Description:
       'Recevez des recommandations personnalisées et des solutions adaptées à vos besoins en gestion immobilière.',
@@ -614,17 +627,17 @@ const Contact = (props) => {
 Contact.defaultProps = {
   content2:
     'N\'hésitez pas à nous contacter par email ou téléphone pendant nos heures d\'ouverture.',
-  email1: 'fab.multiserv@gmail.com',
+  email1: 'fab.multiserv@gmail.com / boubatounkara000@gmail.com',
   address1: '110 avenues Colgate, 13009 Marseille',
   content3:
     'Notre bureau est idéalement situé au cœur de la ville, ce qui facilite votre visite.',
   content1:
     'Nous sommes là pour vous aider avec tous vos besoins en gestion immobilière. Contactez-nous pour toute question ou pour planifier une consultation.',
   content4:
-    'Laissez-nous vous aider à gérer vos propriétés de manière efficace et efficiente.',
+    'Laissez-nous vous aider à gérer vos propretés  de manière efficace et efficiente.',
   heading1: 'Contactez-Nous',
   content5: 'Nous avons hâte de vous entendre !',
-  phone1: '+33 633 29 24 81 / +33 751 00 62 76',
+  phone1: '+336 33 29 24 81 / +337 51 00 62 76',
 };
 
 Contact.propTypes = {
@@ -738,8 +751,8 @@ const Home = (props) => {
   return (
     React.createElement('div', { className: "home-container",}
       , React.createElement(Helmet, null
-        , React.createElement('title', null, "FAB mulot-service"  )
-        , React.createElement('meta', { property: "og:title", content: "Bienvenue chez FAB Propriété et multo-service"  ,} )
+        , React.createElement('title', null, "FAB multi-service"  )
+        , React.createElement('meta', { property: "og:title", content: "Bienvenue chez FAB Propreté et multo-service"  ,} )
       )
       , React.createElement('div', { className: "home-navbar",}
         , React.createElement(Navbar, null)
@@ -773,8 +786,3 @@ root.render(
     <Home />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
